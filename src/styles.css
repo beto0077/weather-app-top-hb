@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+}
+
+.site-header {
+    display: flex;
+}
+
+.site-logo {
+    img {
+        width: 4rem;
+    }
+}
