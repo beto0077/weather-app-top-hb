@@ -38,24 +38,24 @@ Although this design goes beyond the requirements of the original TOP project, i
 
 ## 🧱 Project Structure
 
-weather-app-top-hb/
-├─ src/
-│ ├─ assets/
-│ │ └─ images/
-│ │ └─ hb-logo-black.png
-│ ├─ ui/
-│ │ ├─ weather-card.js
-│ │ ├─ giphy-image.js
-│ │ └─ loader-circle.js
-│ ├─ controller.js
-│ ├─ display.js
-│ ├─ index.js
-│ ├─ styles.css
-│ └─ template.html
-├─ webpack.config.js
-├─ package.json
-├─ package-lock.json
-└─ README.md
+|-- .gitignore
+|-- package.json
+|-- package-lock.json
+|-- README.md
+|-- src
+|   |-- assets
+|   |   `-- images
+|   |       `-- hb-logo-black.png
+|   |-- controller.js
+|   |-- display.js
+|   |-- index.js
+|   |-- styles.css
+|   |-- template.html
+|   `-- ui
+|       |-- giphy-image.js
+|       |-- loader-circle.js
+|       `-- weather-card.js
+`-- webpack.config.js
 
 
 The application’s logic is divided into clear, maintainable modules:
