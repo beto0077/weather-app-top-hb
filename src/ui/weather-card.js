@@ -1,5 +1,5 @@
 function fahrenheitToCelsius(fahrenheitTemp) {
-    return ((Number(fahrenheitTemp) - 32) * (5 / 9)).toFixed(2);
+    return ((Number(fahrenheitTemp) - 32) * (5 / 9)).toFixed(0);
 }
 
 export function createWeatherCard(responseData) {
@@ -15,15 +15,15 @@ export function createWeatherCard(responseData) {
     const temp = document.createElement("p");
 
     cardContainer.classList.add("weather-card");
-    address.textContent = responseData.address;
+    address.textContent = responseData.resolvedAddress;
     currentConditionsContainer.classList.add("current-conditions-container");
     conditions.textContent = `Conditions: ${responseData.currentConditions.conditions}`;
-    measurementTime.textContent = `Data obtained at: ${responseData.currentConditions.datetime}`;
-    feelsLike.textContent = `Feels like: ${fahrenheitToCelsius(responseData.currentConditions.feelslike)+"\u00B0C"}`;
-    humidity.textContent = `Humidity: ${fahrenheitToCelsius(responseData.currentConditions.humidity)+"\u00B0C"}`;
+    measurementTime.textContent = `Data obtained at (${responseData.resolvedAddress} local time): ${responseData.currentConditions.datetime}`;
+    feelsLike.textContent = `Feels like: ${fahrenheitToCelsius(responseData.currentConditions.feelslike) + "\u00B0C"}`;
+    humidity.textContent = `Humidity: ${fahrenheitToCelsius(responseData.currentConditions.humidity) + "\u00B0C"}`;
     sunrise.textContent = `Sunrise time: ${responseData.currentConditions.sunrise}`;
     sunset.textContent = `Sunset time: ${responseData.currentConditions.sunset}`;
-    temp.textContent = `Actual temperature: ${fahrenheitToCelsius(responseData.currentConditions.temp)+"\u00B0C"}`;
+    temp.textContent = `Actual temperature: ${fahrenheitToCelsius(responseData.currentConditions.temp) + "\u00B0C"}`;
 
     cardContainer.appendChild(address);
     currentConditionsContainer.appendChild(conditions);

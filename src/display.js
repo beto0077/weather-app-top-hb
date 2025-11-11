@@ -32,7 +32,7 @@ export function displayWeatherInformation(response) {
     const weatherCard = createWeatherCard(response);
     apiCallResult.appendChild(weatherCard);
     // if (onDisplayWeather) onDisplayWeather(response.currentConditions.conditions);
-    if (onDisplayWeather) onDisplayWeather(response.address);
+    if (onDisplayWeather) onDisplayWeather(response.resolvedAddress);
 }
 
 export function bindDisplayWeather(callback) {
