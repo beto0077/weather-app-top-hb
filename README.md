@@ -1,7 +1,7 @@
 # weather-app-top-hb
 
 A modular, responsive weather application built as part of *The Odin Project* JavaScript course.  
-This project retrieves real-time weather data and weather-related GIFs using external APIs and displays them through a dynamic UI powered by JavaScript and Webpack.
+This project retrieves real-time weather data and location-related GIFs using external APIs and displays them through a dynamic UI powered by JavaScript and Webpack.
 
 ---
 
@@ -10,7 +10,7 @@ This project retrieves real-time weather data and weather-related GIFs using ext
 The **Weather App (TOP HB)** allows users to:
 - Search for any location in the world.
 - View up-to-date weather data including temperature, humidity, sunrise/sunset times, and general conditions.
-- See a relevant animated GIF representing the current weather.
+- See a relevant animated GIF representing the current location.
 - Switch seamlessly between locations without page reloads.
 
 This version of the project is a **secure, production-oriented reinterpretation** of the original assignment proposed by *The Odin Project (TOP)*.
