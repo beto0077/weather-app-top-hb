@@ -37,7 +37,7 @@ Although this design goes beyond the requirements of the original TOP project, i
 ---
 
 ## 🧱 Project Structure
-
+```markdown
 |-- .gitignore
 |-- package.json
 |-- package-lock.json
@@ -56,7 +56,7 @@ Although this design goes beyond the requirements of the original TOP project, i
 |       |-- loader-circle.js
 |       `-- weather-card.js
 `-- webpack.config.js
-
+```
 
 The application’s logic is divided into clear, maintainable modules:
 - `controller.js` handles communication between the UI and the backend API.  
