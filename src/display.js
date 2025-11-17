@@ -1,6 +1,7 @@
 import { createWeatherCard } from "./ui/weather-card";
 import { createGiphyImage } from "./ui/giphy-image";
 import { createLoaderCircle } from "./ui/loader-circle";
+import { createErrorNotification } from "./ui/error-notification";
 
 const searchForm = document.querySelector(".search-form");
 const apiCallResult = document.querySelector(".api-call-result");
@@ -25,6 +26,12 @@ function handleFormSubmit(event) {
 
 export function bindFormSubmit(callback) {
     onFormSubmit = callback;
+}
+
+export function displayErrorNotification() {
+    cleanContainer(apiCallResult);
+    apiCallResult.appendChild(createErrorNotification());
+    if (onDisplayWeather) onDisplayWeather("error");
 }
 
 export function displayWeatherInformation(response) {

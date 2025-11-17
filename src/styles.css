@@ -66,13 +66,34 @@ body {
     align-items: center;
     gap: 0.5rem;
 
-    .reminder-text{
+    .reminder-text {
+        max-width: 60ch;
+    }
+}
+
+.error-notification {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
         max-width: 60ch;
     }
 }
 
 .weather-card {
-    max-width: 375px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,4 +181,14 @@ body {
 
 .search-button:active {
     opacity: .5;
+}
+
+@media (max-width: 700px) {
+
+    .weather-card,
+    .error-notification,
+    .api-image {
+        max-width: 375px;
+    }
+
 }
